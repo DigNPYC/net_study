@@ -4,7 +4,13 @@ package com.ls.faw.netty.c1;
  * @date 2023/02/23
  */
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.nio.channels.Channel;
+import java.nio.channels.FileChannel;
 
 import static com.ls.faw.netty.c1.util.ByteBufferUtil.debugAll;
 
@@ -29,5 +35,16 @@ public class TestBufferReadWrite {
 
         buffer.put(new byte[]{0x65,0x6f}); // b c d
         debugAll(buffer);
+
+        try(FileChannel channel = new FileOutputStream("netty-demo/data.txt",true).getChannel();){
+            buffer.flip();
+            channel.write(buffer);
+            buffer.clear();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
