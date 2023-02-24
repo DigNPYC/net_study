@@ -4,15 +4,13 @@ package com.ls.faw.netty.c1;
  * @date 2023/02/23
  */
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.nio.channels.Channel;
 import java.nio.channels.FileChannel;
 
-import static com.ls.faw.netty.c1.util.ByteBufferUtil.debugAll;
+import static util.ByteBufferUtil.debugAll;
 
 /**
  * @author 李帅
