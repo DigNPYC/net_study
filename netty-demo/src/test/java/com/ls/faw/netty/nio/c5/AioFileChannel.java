@@ -1,4 +1,4 @@
-package com.ls.faw.netty.c5;
+package com.ls.faw.netty.nio.c5;
 
 import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;

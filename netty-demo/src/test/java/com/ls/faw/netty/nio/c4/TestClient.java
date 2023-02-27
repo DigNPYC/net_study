@@ -1,4 +1,4 @@
-package com.ls.faw.netty.c4;
+package com.ls.faw.netty.nio.c4;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
